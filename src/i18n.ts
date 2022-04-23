@@ -6,10 +6,8 @@ import { initReactI18next } from "react-i18next";
 const resources = {
   en: {
     translation: {
-      hello: "Hello everybody",
-      red: "red",
-      color_apple: "{{color}} apple",
-      fruit_one: "{{count}} fruit",
+      hello: "Hello {{to}}",
+      fruit_one: "one fruit",
       fruit_other: "{{count}} fruits",
     },
   },
@@ -20,12 +18,10 @@ const resources = {
   },
   ro: {
     translation: {
-      hello: "Salutare tuturor",
-      red: "roșu",
-      color_apple: "mar {{color}}",
-      fruit_one: "fruct",
-      fruit_few: "fructe",
-      fruit_other: "de fructe",
+      hello: "Salutare {{to}}",
+      fruit_one: "un fruct",
+      fruit_few: "{{count}} fructe",
+      fruit_other: "{{count}} de fructe",
     },
   },
 };
@@ -34,7 +30,7 @@ i18n
   .use(initReactI18next) // passes i18n down to react-i18next
   .init({
     resources,
-    lng: "en-GB",
+    lng: navigator.language,
 
     keySeparator: false, // we do not use keys in form messages.welcome
 

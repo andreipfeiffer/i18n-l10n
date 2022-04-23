@@ -15,6 +15,8 @@ function App() {
   const [date, setDate] = React.useState(new Date());
   const [total, setTotal] = React.useState(1000);
 
+  const name = "tim.js";
+
   return (
     <div>
       <LanguageSelector
@@ -22,11 +24,8 @@ function App() {
         onChange={(lang) => i18n.changeLanguage(lang)}
       />
 
-      <p>{t("hello")}</p>
+      <p>{t("hello", { to: name })}</p>
       {/* <p>Hello everybody</p> */}
-
-      <p>{t("color_apple", { color: t("red") })}</p>
-      {/* <p>Red apple</p> */}
 
       <fieldset>
         <Input value={nr} onChange={setNr} length={3} />
