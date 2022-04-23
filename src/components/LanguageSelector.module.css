@@ -1,0 +1,26 @@
+.language_list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.language_list button {
+  appearance: none;
+  border: 1px #eeeeee solid;
+  background: none;
+  margin-left: -1px;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.language_list button:hover {
+  border-color: #aaaaaa;
+  position: relative;
+}
+
+.language_list button[data-active="true"] {
+  border-color: dodgerblue;
+  background-color: lavender;
+  position: relative !important;
+}
